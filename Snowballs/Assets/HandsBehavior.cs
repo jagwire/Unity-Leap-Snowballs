@@ -49,10 +49,12 @@ public class HandsBehavior : MonoBehaviour {
                 if (!started)
                 {
                     startPanel.SetActive(false);
+                    started = true;
                 }
             }
         }
-        
+
+        if (!started) return;
 
         if(frame.Hands.Count == 2)
         {
